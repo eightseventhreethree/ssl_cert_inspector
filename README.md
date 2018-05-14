@@ -1,3 +1,5 @@
+[![Maintainability](https://api.codeclimate.com/v1/badges/729da11ca76d0c46c56c/maintainability)](https://codeclimate.com/github/eightseventhreethree/ssl_cert_inspector/maintainability)
+
 # ssl_cert_inspector
 Python based CLI tool for inspecting properties in SSL certs
 
