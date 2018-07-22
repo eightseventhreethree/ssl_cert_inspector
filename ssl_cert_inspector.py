@@ -1,13 +1,6 @@
 #!/usr/bin/env python
 
-import argparse
-import datetime
-import subprocess
-import sys
-import ssl
-import socket
-import logging
-import pprint
+import argparse, datetime, subprocess, sys, ssl, socket, logging, pprint
 
 class Arguments(object):
     def argumentParser(self):
