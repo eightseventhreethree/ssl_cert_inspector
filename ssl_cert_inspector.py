@@ -12,11 +12,11 @@ class CLI(object):
         parser.add_argument('-s', action='store', default='keys', dest='search',
                             help='OpenSSL argument to look for in certificate, use "keys" to get list of keys to retrieve.')
         parser.add_argument('-v', action='store_true', default=False, dest='verbose', help='Enable verbosity/debug.')
-        parsedArguments = parser.parse_args()
-        self.host = parsedArguments.host
-        self.port = int(parsedArguments.port)
-        self.search = parsedArguments.search
-        self.verbose = parsedArguments.verbose
+        parsed_arguments = parser.parse_args()
+        self.host = parsed_arguments.host
+        self.port = int(parsed_arguments.port)
+        self.search = parsed_arguments.search
+        self.verbose = parsed_arguments.verbose
         if self.host == None:
             print "host undefined use -h or --help"
             sys.exit(1)
