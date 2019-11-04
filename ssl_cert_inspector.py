@@ -18,11 +18,11 @@ class CLI(object):
     self.search = parsed_arguments.search
     self.verbose = parsed_arguments.verbose
     if self.host == None:
-      print "host undefined use -h or --help"
+      print("host undefined use -h or --help")
       sys.exit(1)
     if self.verbose:
-      print "Verbose mode enabled."
-      print "Logger set: DEBUG"
+      print("Verbose mode enabled.")
+      print("Logger set: DEBUG")
       logging.basicConfig(stream=sys.stdout, level=logging.INFO)
     else:
       logging.basicConfig(stream=sys.stdout, level=logging.WARN)
@@ -84,10 +84,10 @@ class SSL(object):
     peer_cert = self._set_peer_cert
     pp = pprint.PrettyPrinter(indent=4)
     if requested_value == 'keys':
-      print "Available keys to search for: "
-      for key, value in peer_cert.iteritems():
-        print " * " + key + " "
-        return requested_value
+      print("Available keys to search for: ")
+      for key, value in peer_cert.items():
+        print(" * " + key + " ")
+      return requested_value
     else:
       parsed_peer_cert = peer_cert[requested_value]
       return parsed_peer_cert
@@ -96,4 +96,4 @@ class SSL(object):
 if __name__ == '__main__':
   cli = CLI()
   ssl = SSL(cli.get_host, cli.get_port)
-  print ssl.get_peer_cert_values(cli.get_search)
+  print(ssl.get_peer_cert_values(cli.get_search))
